@@ -12,4 +12,5 @@ mongoose.connect('mongodb+srv://ECOM-123:bFzcdBkgLnYk3wb@e-commerce.4qnqk.mongod
     else { console.log('Error: Not Connected to the MongoDb' + error) }
 });
 
+
 // mongodb+srv://lms1:lms1@clusterlms.1xyuk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

@@ -6,6 +6,10 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const ResponseOfMyDataBase = require('./configuration/DataBaseConfiguration');
+// npm install crypto-js
+// Crypto is a module in Node. js which deals with an algorithm that performs data encryption and decryption. This is used for security purpose like user authentication where storing the password in Database in the encrypted form. Crypto module provides set of classes like hash, HMAC, cipher, decipher, sign, and verify.
+const crypto = require('crypto');
+// npm i bcrypt
 
 //? Dependencies ends
 
@@ -19,6 +23,7 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.raw());
 app.use(cors());
+app.use('/assets',express.static('assets'));
 const PORT = process.env.PORT || 1234;
 
 //? Initilizing the app ends

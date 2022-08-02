@@ -10,7 +10,12 @@ const {
     DeleteProductData
 } = require('../Controller/ProductManagementController');
 
-Router.post('/ProductData', ProductData);
+//?Calling My Middlewares
+const {
+    UploadProductImage
+  } =  require('../middlewares/UploadMedia');
+
+Router.post('/ProductData',UploadProductImage.single('ProductImage'), ProductData);
 Router.get('/GetProductData', GetProductData);
 Router.post('/UpdateMyProductData', UpdateMyProductData);
 Router.delete('/DeleteProductData', DeleteProductData);
