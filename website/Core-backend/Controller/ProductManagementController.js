@@ -69,7 +69,7 @@ const DeleteProductData = async (req, res) => {
     try {
         const DocToDelete = await ProductModel.deleteMany({ Status: 1 });
         res.json({
-            Message: 'Documents has benn Updated',
+            Message: 'Documents has benn Updated/Deleted',
             Data: true,
             Result: DocToDelete
         })
